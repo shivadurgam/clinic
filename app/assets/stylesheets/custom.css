@@ -1,0 +1,163 @@
+	header {
+  
+    height: 120px;
+    background-color:white;
+    color:#4DB8B8;
+    text-align:center;
+    padding:0px;	
+
+    background-size: 130px 120px;
+    background-image: url("/Hearing_left.jpeg"), url("/hearing_right.jpeg");
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+	}
+	nav {
+    line-height:30px;
+    background-color:#4DB8B8;
+    color:white;
+    margin-top: 40px;
+    text-align: center;
+    height:50px;
+   
+    padding:5px;	      
+	}
+    nav ul{
+    margin: 0;
+    padding: 0;
+    }
+
+    nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em 0;
+    }
+
+    nav ul li a {
+    padding: 0 5px;
+    font-weight: bold;
+    }
+
+    nav ul li a:visited {
+    color: #069;
+    }
+
+    nav ul li a:hover {
+    text-decoration: underline;
+    }
+
+	section {
+    width:1400px;
+    height: 700px;
+    margin-top: 95px;
+
+    
+    float:center;
+    padding:10px;
+    	 
+	}
+	pre.address {
+    position: relative;
+    bottom: 0px;
+    left: 10px;
+    }
+	footer {
+    background-color:#4DB8B8;
+    color:white;
+    text-align: center;
+    width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+
+
+	}
+
+    footer nav {
+        float: none;
+    }
+
+	img.imge {
+    opacity: 0.1;
+    filter: alpha(opacity=40);
+    position: fixed;
+    }
+
+    img.img1{
+    width: 200px;
+    height: 200px;
+    float: right;
+
+    margin-right: 25px;
+
+
+
+    }
+    .round {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: : 10px;
+}
+
+    div.sidee{
+        float:center;
+        margin-top: 30px;
+        margin-left: 80px;
+        position: relative;
+    }
+
+     div.err{
+        float:left;
+        width: 450px;
+        height: 600px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .flash_msg {
+        color: green;
+        text-align: center;
+        font-weight: bold; 
+
+    }
+
+    .flash_success {
+        color: green;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .flash_error {
+        color: red;
+        text-align: center;
+        font-weight: bold;
+        
+    }
+
+   
+    
+
+    /* patient show page*/
+
+    table.profile {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    td.main {
+        width: 70%;
+        padding: 1em;
+
+    }
+
+    td.sidebar {
+        width: 30%;
+        padding: 1em;
+        vertical-align: top;
+        background: #ffc;
+    }
+
+    .profile img.gravator{
+        border: 1px solid #999;
+        margin-bottom: -15px;
+    }
+    }

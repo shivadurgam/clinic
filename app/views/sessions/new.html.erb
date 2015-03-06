@@ -1,0 +1,14 @@
+<% provide(:title, 'Signin') %>
+<%= form_for(:session, url: sessions_path) do | f | %>
+
+	<%= f.label :email %>
+	<%= f.email_field :email, placeholder: "minimum 4 characters"%></br></br>
+	<%= f.label :password %>
+	<%= f.password_field :password, placeholder: "minimum 4 characters"%></br></br>
+	<%= f.submit 'Sign in' %>
+
+<% end %>
+
+<br />
+<br />
+<%= link_to 'Back', new_user_path %>

@@ -1,0 +1,29 @@
+<% provide(:title, 'Profile') %>
+<p id="notice"><%= notice %></p>
+<h2 style="color:green">Welcome <%= @user.user_name %>! </h2> <br />
+
+
+
+
+<table class="profile" summary="Profile Information">
+	<tr>
+		<td class="mail">
+			<h1> 
+			      <%= gravatar_for @user %> 
+			      <%= @user.user_name %> 
+			</h1>
+		</td>
+		<td class="sidebar round">
+			<strong>Patient Username:</strong> <%= @user.user_name %> <br /> <br />
+			<strong>Patient Email:</strong> <%= @user.email %> <br /> <br />
+			<strong>URL:</strong> <%= link_to user_path(@user), @user%> <br /> <br />
+			<strong>Edit Your Profile:</strong> <%= link_to 'Here', edit_user_path(@user) %>  <br /> <br />
+		</td>
+	</tr>
+
+<br />
+</table>
+
+<br /> <br /> <br />
+
+<h2> Click here to Fix an appointment </h2>

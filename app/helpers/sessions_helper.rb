@@ -1,8 +1,12 @@
 module SessionsHelper
 
 	def sign_in(user)
-		cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+		#cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+		cookies.signed[:remember_token] = { value: "XJ-122", expires: 1.hour.from_now }
+		cookies.signed[:remember_token] = [user.id, user.salt]
+		
 		current_user = user
+		
 	end
 
 	def current_user=(user)
@@ -22,7 +26,23 @@ module SessionsHelper
 		self.current_user = nil
 	end
 
+	def current_user?(user)
+		user == current_user
+	end
 
+	def deny_access
+		session[:return_to] = request.fullpath
+		redirect_to signin_path, :flash => {:error1 => "Please sign in to access this page!"}
+	end
+
+	def redirect_back_or(default)
+		redirect_to(session[:return_to] || default)
+		clear_return_to
+	end
+
+	def clear_return_to
+		session[:return_to] = nil
+	end
 
 	private
 

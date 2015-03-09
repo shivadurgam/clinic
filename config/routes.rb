@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  get 'calendar/show'
+
+  devise_for :patients
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
@@ -9,7 +12,10 @@ Rails.application.routes.draw do
 
   get '/signin' => "sessions#new", as: :signin
 
-  root 'users#index'
+
+
+  resource :calendar, only: [:show], controller: :calendar
+  root to: "users#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

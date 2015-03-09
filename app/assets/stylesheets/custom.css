@@ -120,6 +120,15 @@
 
     }
 
+    .flash_error1 {
+        color: red;
+        font-weight: bold;
+        background-color: white;
+        width: 300px;
+        border: 2px solid red;
+        padding: 5px;
+    }
+
     .flash_success {
         color: green;
         text-align: center;

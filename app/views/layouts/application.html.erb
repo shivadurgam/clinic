@@ -10,6 +10,8 @@
 <body>
 
 
+
+
 <div class="container">
     <%= render 'layouts/header' %>
     <section class="round">
@@ -18,6 +20,8 @@
     	<%= value %>
     </div> <br />
     <% end %>
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
       <%= yield %>
       <img src="/hearing3.jpg", class="imge">
     </section>
